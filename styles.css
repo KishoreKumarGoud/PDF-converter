@@ -8,7 +8,7 @@ body {
 .container {
     text-align: center;
     background: white;
-    padding: 40px;
+    padding: 20px; /* Reduced padding for better mobile view */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -16,28 +16,26 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    max-width: 500px;
+    max-width: 500px; /* Adjust for desktop view */
 }
 
 h1 {
     color: #333;
-   padding-block: 15px;
+    padding-block: 15px;
+    font-size: 24px; /* Suitable font size for both views */
 }
 
 .button-group {
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: center; /* Center the buttons */
+    display: flex;
+    flex-direction: column; /* Default to vertical on mobile */
+    justify-content: center;
     margin: 20px 0;
 }
 
 .file-upload {
     position: relative;
     overflow: hidden;
-    margin-right: 15px; /* Space between buttons */
-}
-#imageInput
-{
-    height: auto;
+    margin-bottom: 10px; /* Space between buttons */
 }
 
 .file-upload input[type="file"] {
@@ -52,14 +50,16 @@ h1 {
 }
 
 .file-upload span {
-    background-color: #007BFF; /* Button color */
+    background-color: #007BFF;
     color: white;
-    padding: 10px 30px;
+    padding: 10px 30px; /* Adjusted padding */
     border-radius: 5px;
+    text-align: left;
     display: inline-block;
-    font-size: 25px;
+    font-size: 25px; /* Suitable font size */
     transition: background-color 0.3s;
-    height: 35px; /* Same height as the button */
+    height: 35px; /* Adjusted height */
+    width: 100%; /* Full width for mobile */
 }
 
 .file-upload span:hover {
@@ -67,15 +67,16 @@ h1 {
 }
 
 button {
-    background-color: #28a745; /* Green color */
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 15px 30px;
-    font-size: 23px;
+    padding: 15px 20px; /* Adjusted padding */
+    font-size: 20px; /* Suitable font size */
     cursor: pointer;
     transition: background-color 0.3s;
-    height: 54px; /* Same height */
+    height: 54px; /* Consistent height */
+    width: 100%; /* Full width for mobile */
 }
 
 button:hover {
@@ -84,10 +85,25 @@ button:hover {
 
 #downloadButton {
     width: 100%; /* Full width for the download button */
-    margin-top: 50px; /* Space above the 
-    paddingdownload button */
+    margin-top: 50px; /* Space above the download button */
     background-color: red;
     transition: background-color 0.3s;
+    font-size: 20px; /* Consistent font size */
+}
 
-    
+/* Media Queries for larger screens */
+@media (min-width: 600px) {
+    .button-group {
+        flex-direction: row; /* Side by side on larger screens */
+    }
+
+    .file-upload, button {
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
+        margin-right: 10px; /* Space between buttons */
+        width: auto; /* Reset width for larger screens */
+    }
+
+    .container {
+        padding: 40px; /* More padding on larger screens */
+    }
 }
