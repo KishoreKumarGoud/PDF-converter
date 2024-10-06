@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #333;
+   padding-block: 15px;
+}
+
+.button-group {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the buttons */
+    margin: 20px 0;
+}
+
+.file-upload {
+    position: relative;
+    overflow: hidden;
+    margin-right: 15px; /* Space between buttons */
+}
+#imageInput
+{
+    height: auto;
+}
+
+.file-upload input[type="file"] {
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.file-upload span {
+    background-color: #007BFF; /* Button color */
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 25px;
+    transition: background-color 0.3s;
+    height: 35px; /* Same height as the button */
+}
+
+.file-upload span:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+button {
+    background-color: #28a745; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 23px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 54px; /* Same height */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+#downloadButton {
+    width: 100%; /* Full width for the download button */
+    margin-top: 50px; /* Space above the 
+    paddingdownload button */
+    background-color: red;
+    transition: background-color 0.3s;
+
+    
+}
